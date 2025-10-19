@@ -4,38 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>جستجوی کارگران - کاریابی</title>
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="header-inner">
-      <div class="logo"><img src="logo-placeholder.png" alt="لوگو" /></div>
-      <nav>
-        <a href="index.html">خانه</a>
-        <a href="employer.html">ثبت کارفرما</a>
-        <a href="worker.html">ثبت کارگر</a>
-        <a href="jobs.html">جستجوی کار</a>
-        <a href="workers.html">جستجوی کارگران</a>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- هدر -->
+  <header class="bg-blue-600 text-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="logo flex items-center">
+        <img src="logo.png" alt="لوگو" class="h-10 w-10 mr-2 rounded-full shadow" />
+        <span class="font-bold text-lg">کاریابی</span>
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">خانه</a>
+        <a href="employer.html" class="hover:underline">ثبت کارفرما</a>
+        <a href="worker.html" class="hover:underline">ثبت کارگر</a>
+        <a href="jobs.html" class="hover:underline">جستجوی کار</a>
+        <a href="workers.html" class="hover:underline font-semibold">جستجوی کارگران</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h2>جستجوی کارگران</h2>
+  <!-- محتوای اصلی -->
+  <main class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">جستجوی کارگران</h2>
 
-    <div class="search-card">
-      <input id="workerSearchInput" type="text" placeholder="مهارت یا نام را وارد کنید...">
-      <button id="workerSearchBtn" class="btn">جستجو</button>
-      <button id="workerClearBtn" class="btn ghost">نمایش همه</button>
+    <!-- کارت جستجو -->
+    <div class="bg-white shadow-md rounded-lg p-4 flex flex-col sm:flex-row gap-3 items-center mb-6">
+      <input id="workerSearchInput" type="text" placeholder="مهارت یا نام را وارد کنید..."
+        class="flex-1 border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+      <button id="workerSearchBtn"
+        class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        جستجو
+      </button>
+      <button id="workerClearBtn"
+        class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-md hover:bg-gray-300 transition">
+        نمایش همه
+      </button>
     </div>
 
-    <div id="workerList" class="saved-list"></div>
+    <!-- نتایج جستجو -->
+    <div id="workerList" class="space-y-2"></div>
 
-    <footer class="site-footer">
-      <p>نتایج از داده‌های ثبت‌شده در مرورگر شما خوانده می‌شود.</p>
+    <!-- فوتر -->
+    <footer class="mt-8 p-4 bg-gray-100 rounded-lg text-gray-700 text-sm">
+      نتایج از داده‌های ثبت‌شده در مرورگر شما خوانده می‌شود.
     </footer>
   </main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

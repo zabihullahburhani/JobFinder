@@ -4,58 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ثبت کارفرما - کاریابی</title>
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="header-inner">
-      <div class="logo"><img src="logo-placeholder.png" alt="لوگو" /></div>
-      <nav>
-        <a href="index.html">خانه</a>
-        <a href="employer.html">ثبت کارفرما</a>
-        <a href="worker.html">ثبت کارگر</a>
-        <a href="jobs.html">جستجوی کار</a>
-        <a href="workers.html">جستجوی کارگران</a>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- هدر -->
+  <header class="bg-blue-600 text-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="logo flex items-center">
+        <img src="logo.png" alt="لوگو" class="h-10 w-10 mr-2 rounded-full shadow" />
+        <span class="font-bold text-lg">کاریابی</span>
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">خانه</a>
+        <a href="employer.html" class="hover:underline font-semibold">ثبت کارفرما</a>
+        <a href="worker.html" class="hover:underline">ثبت کارگر</a>
+        <a href="jobs.html" class="hover:underline">جستجوی کار</a>
+        <a href="workers.html" class="hover:underline">جستجوی کارگران</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h2>ثبت فرصت کاری (برای کارفرما)</h2>
-    <p class="hint">لطفاً اطلاعات دقیق وارد شود. این اطلاعات در مرورگر ذخیره و می‌توانید آن‌ها را دانلود یا به صورت دستی در گیت‌هاب قرار دهید.</p>
+  <!-- محتوای اصلی -->
+  <main class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-2">ثبت فرصت کاری (برای کارفرما)</h2>
+    <p class="text-gray-600 mb-6">لطفاً اطلاعات دقیق وارد شود. این اطلاعات در مرورگر ذخیره و می‌توانید آن‌ها را دانلود یا به صورت دستی در گیت‌هاب قرار دهید.</p>
 
-    <form id="employerForm" class="form-card">
-      <label>نام کارفرما (یا شرکت)</label>
-      <input id="empName" type="text" placeholder="مثلاً: شرکت خدماتی احمدی" required>
+    <!-- فرم -->
+    <form id="employerForm" class="bg-white shadow-md rounded-lg p-6 space-y-4">
+      <div>
+        <label class="block mb-1 font-medium">نام کارفرما (یا شرکت)</label>
+        <input id="empName" type="text" placeholder="مثلاً: شرکت خدماتی احمدی"
+          class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+      </div>
 
-      <label>شماره تماس</label>
-      <input id="empPhone" type="text" placeholder="مثلاً: 0700123456" required>
+      <div>
+        <label class="block mb-1 font-medium">شماره تماس</label>
+        <input id="empPhone" type="text" placeholder="مثلاً: 0700123456"
+          class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+      </div>
 
-      <label>نوع کار مورد نیاز</label>
-      <input id="empJobType" type="text" placeholder="مثلاً: نقاشی، رانندگی، نگهبانی" required>
+      <div>
+        <label class="block mb-1 font-medium">نوع کار مورد نیاز</label>
+        <input id="empJobType" type="text" placeholder="مثلاً: نقاشی، رانندگی، نگهبانی"
+          class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+      </div>
 
-      <label>دستمزد / نرخ پیشنهادی (اختیاری)</label>
-      <input id="empRate" type="text" placeholder="مثلاً: روزانه 800 AFN">
+      <div>
+        <label class="block mb-1 font-medium">دستمزد / نرخ پیشنهادی (اختیاری)</label>
+        <input id="empRate" type="text" placeholder="مثلاً: روزانه 800 AFN"
+          class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+      </div>
 
-      <label>توضیحات (محل، مدت، شرایط)</label>
-      <textarea id="empDesc" rows="4" placeholder="مثلاً: نیاز به کارگر با تجربه، ساعت کاری..."></textarea>
+      <div>
+        <label class="block mb-1 font-medium">توضیحات (محل، مدت، شرایط)</label>
+        <textarea id="empDesc" rows="4" placeholder="مثلاً: نیاز به کارگر با تجربه، ساعت کاری..."
+          class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+      </div>
 
-      <div class="form-actions">
-        <button type="submit" class="btn">ثبت فرصت</button>
-        <button type="button" id="downloadJobs" class="btn ghost">دانلود (JSON)</button>
+      <div class="flex space-x-2 mt-4">
+        <button type="submit" class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-700 transition">
+          ثبت فرصت
+        </button>
+        <button type="button" id="downloadJobs"
+          class="bg-gray-200 text-gray-800 font-semibold px-4 py-2 rounded-md hover:bg-gray-300 transition">
+          دانلود (JSON)
+        </button>
       </div>
     </form>
 
-    <section class="saved-list">
-      <h3>فرصت‌های ثبت شده</h3>
-      <div id="jobList"></div>
+    <!-- لیست فرصت‌ها -->
+    <section class="mt-8">
+      <h3 class="text-xl font-bold mb-2">فرصت‌های ثبت شده</h3>
+      <div id="jobList" class="space-y-2"></div>
     </section>
 
-    <footer class="site-footer">
-      <p>می‌توانید بعد از ثبت، فایل JSON را دانلود کرده و در گیت‌هاب خود آپلود کنید تا داده‌ها در مخزن شما قرار گیرد.</p>
+    <!-- فوتر -->
+    <footer class="mt-8 p-4 bg-gray-100 rounded-lg text-gray-700 text-sm">
+      می‌توانید بعد از ثبت، فایل JSON را دانلود کرده و در گیت‌هاب خود آپلود کنید تا داده‌ها در مخزن شما قرار گیرد.
     </footer>
   </main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

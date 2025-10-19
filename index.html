@@ -1,79 +1,72 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>سامانه کاریابی و کارفرمایی</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پلتفرم کاریابی تخار</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="header-inner">
-      <div class="logo">
-        <!-- مکان قرارگیری لوگو: میتوانید لوگو.png را در همان پوشه قرار دهید -->
-        <img src="logo-placeholder.png" alt="لوگو" />
+<body class="bg-gray-100 font-[Vazir]">
+
+  <!-- هدر -->
+  <header class="bg-blue-600 text-white py-4 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+      <div class="flex items-center space-x-3 space-x-reverse">
+        <img src="logo.png" alt="لوگو" class="w-12 h-12 rounded-full border-2 border-white">
+        <h1 class="text-2xl font-bold">کاریابی تخار</h1>
       </div>
-      <nav>
-        <a href="index.html">خانه</a>
-        <a href="employer.html">ثبت کارفرما</a>
-        <a href="worker.html">ثبت کارگر</a>
-        <a href="jobs.html">جستجوی کار</a>
-        <a href="workers.html">جستجوی کارگران</a>
+      <nav class="space-x-6 space-x-reverse">
+        <a href="index.html" class="hover:text-yellow-200">خانه</a>
+        <a href="employer.html" class="hover:text-yellow-200">ثبت کارفرما</a>
+        <a href="worker.html" class="hover:text-yellow-200">ثبت کارگر</a>
+        <a href="jobs.html" class="hover:text-yellow-200">فرصت‌های کاری</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-text">
-        <h1>اتصال آسان کارفرما و کارگر</h1>
-        <p class="slogan">فرصت‌های شغلی محلی را بیابید — ثبت و جستجو رایگان و ساده</p>
-        <div class="hero-actions">
-          <a class="btn" href="employer.html">ثبت فرصت کاری</a>
-          <a class="btn ghost" href="worker.html">ثبت خود به‌عنوان کارگر</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1523480717986-6d2a3a0b0f4a?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="کاریابی">
-      </div>
-    </section>
+  <!-- بنر یا پیام خوشامد -->
+  <section class="bg-gradient-to-l from-blue-700 to-blue-500 text-white text-center py-12 shadow-md">
+    <h2 class="text-3xl font-bold mb-2">پل ارتباطی کارفرمایان و کارگران تخار</h2>
+    <p class="text-lg text-blue-100">فرصت‌های شغلی را بیابید یا مهارت‌های خود را معرفی کنید</p>
+  </section>
 
-    <section class="features">
-      <div class="feature">
-        <h3>برای کارفرمایان</h3>
-        <p>فرصت کاری خود را سریع ثبت کنید و به جامعه‌ای از کارگران مراجعه کنید.</p>
+  <!-- کارت‌ها -->
+  <main class="max-w-6xl mx-auto p-6 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+    <!-- کارت ۱ -->
+    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border border-gray-200">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135679.png" alt="worker" class="w-20 h-20 mx-auto mb-4">
+      <h3 class="text-xl font-bold text-center mb-2 text-blue-600">ثبت کارگر</h3>
+      <p class="text-gray-600 text-sm text-center mb-4">اگر شما دارای مهارت هستید، خود را معرفی کنید تا کار مناسب پیدا کنید.</p>
+      <div class="text-center">
+        <a href="worker.html" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">ثبت نام</a>
       </div>
-      <div class="feature">
-        <h3>برای کارگران</h3>
-        <p>مهارت‌ها و تجربه‌تان را معرفی کرده و فرصت‌های مناسب را بیابید.</p>
+    </div>
+
+    <!-- کارت ۲ -->
+    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border border-gray-200">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="employer" class="w-20 h-20 mx-auto mb-4">
+      <h3 class="text-xl font-bold text-center mb-2 text-blue-600">ثبت کارفرما</h3>
+      <p class="text-gray-600 text-sm text-center mb-4">فرصت‌های کاری خود را ثبت کنید تا کارگران با تجربه شما را بیابند.</p>
+      <div class="text-center">
+        <a href="employer.html" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">ثبت فرصت</a>
       </div>
-      <div class="feature">
-        <h3>دسترسی رایگان</h3>
-        <p>تمامی امکانات بدون هزینه و برای اشتراک‌گذاری در سایر پلتفرم‌ها.</p>
+    </div>
+
+    <!-- کارت ۳ -->
+    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border border-gray-200">
+      <img src="https://cdn-icons-png.flaticon.com/512/1067/1067357.png" alt="search" class="w-20 h-20 mx-auto mb-4">
+      <h3 class="text-xl font-bold text-center mb-2 text-blue-600">جستجوی فرصت‌ها</h3>
+      <p class="text-gray-600 text-sm text-center mb-4">در میان ده‌ها فرصت شغلی جستجو کنید و بهترین مورد را بیابید.</p>
+      <div class="text-center">
+        <a href="jobs.html" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">جستجو</a>
       </div>
-    </section>
-
-    <section class="quotes">
-      <h2>شعارهای الهام‌بخش</h2>
-      <ul>
-        <li>«فرصت‌ها را باید ساخت؛ منتظر نمانید.»</li>
-        <li>«هر کار کوچک، گامی به سوی موفقیت است.»</li>
-        <li>«همکاری، رمز تبدیل ایده به واقعیت است.»</li>
-      </ul>
-    </section>
-
-    <section class="howto">
-      <h2>چگونه کار می‌کند</h2>
-      <ol>
-        <li>ثبت‌نام یا وارد شدن (نیاز به ثبت‌نام ندارد — فقط فرم را تکمیل کنید)</li>
-        <li>اطلاعات کار یا مهارت را ثبت کنید</li>
-        <li>جستجو و تماس مستقیم با طرف مقابل</li>
-      </ol>
-    </section>
-
-    <footer class="site-footer">
-      <p>این سایت یک نمونه استاتیک برای کاریابی محلی است. برای ذخیره خودکار روی گیت‌هاب، راهنمایی در README قرار دارد.</p>
-    </footer>
+    </div>
   </main>
+
+  <!-- فوتر -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    © ۲۰۲۵ | کاریابی تخار - توسعه یافته برای استفاده رایگان عمومی
+  </footer>
+
 </body>
 </html>
