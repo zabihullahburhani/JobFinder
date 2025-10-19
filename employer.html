@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ثبت کارفرما</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ثبت کارفرما</h1>
+    <nav>
+      <a href="index.html">خانه</a> |
+      <a href="worker.html">ثبت کارگر</a> |
+      <a href="jobs.html">جستجوی کار</a> |
+      <a href="workers.html">جستجوی کارگران</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form id="employerForm">
+      <input type="text" placeholder="نام کارفرما" required id="empName">
+      <input type="text" placeholder="شماره تماس" required id="empPhone">
+      <input type="text" placeholder="نوع کار مورد نیاز" required id="empJobType">
+      <textarea placeholder="توضیحات" id="empDesc"></textarea>
+      <button type="submit">ثبت اطلاعات</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
