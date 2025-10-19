@@ -1,52 +1,123 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #F3F4F6;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* style.css - Tailwind via CDN + RTL overrides
+   قرار دادن این فایل به جای style.css فعلی کافی است.
+   (گزینهٔ بهتر: اگر مایل باشی می‌توانیم <script src="https://cdn.tailwindcss.com"></script>
+    را هم در head تمام صفحات قرار دهیم تا Tailwind رسمی را فعال کنیم.) */
+
+/* 1) بارگذاری نسخه‌ی کامپایل شده Tailwind از CDN */
+@import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
+
+/* 2) پایه و RTL */
+:root{
+  --primary: #3B82F6; /* آبی ملایم */
+  --bg: #F3F4F6;
+  --card: #FFFFFF;
+  --muted: #6B7280;
+}
+
+/* اطمینان از جهت و فونت فارسی */
+html, body {
   direction: rtl;
   text-align: right;
+  font-family: "Tahoma", "Vazir", "Arial", sans-serif;
+  background: var(--bg);
+  color: #111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-
-header {
-  background-color: #3B82F6;
+/* 3) بازنویسی و نگه داشتن استایل‌های قبلی به صورت سازگار با Tailwind */
+/* header */
+header{
+  background: var(--primary);
   color: white;
-  padding: 15px;
-  text-align: center;
+  padding: 10px 16px;
+}
+.header-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.logo img{height:48px;width:auto}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 8px;
+  font-weight:600;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
+/* container */
+.container{
+  max-width:1100px;
+  margin:20px auto;
+  padding:20px;
 }
 
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* hero (با استفاده از کلاس‌های Tailwind می‌توان ظاهر را قوی‌تر کرد؛ اینجا نگهداری ظاهری قبلی) */
+.hero{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  background: linear-gradient(90deg, rgba(59,130,246,0.08), rgba(255,255,255,0));
+  padding:16px;
+  border-radius:12px;
+}
+.hero-text{flex:1}
+.hero-text h1{margin:0 0 8px 0}
+.slogan{color:var(--muted);margin:0 0 12px 0}
+.hero-actions .btn{margin-left:8px}
+.hero-image img{max-width:420px;border-radius:10px;display:block}
+
+/* features */
+.features{display:flex;gap:12px;margin-top:18px}
+.feature{background:var(--card);padding:14px;border-radius:10px;flex:1;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+
+/* quotes and howto */
+.quotes, .howto{margin-top:18px;background:var(--card);padding:12px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.quotes ul{padding-inline-start:20px;margin:8px 0}
+
+/* forms */
+.form-card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.form-card label{display:block;margin-top:8px;font-weight:600}
+.form-card input, .form-card textarea, .search-card input{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #D1D5DB}
+
+/* buttons */
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:8px;
+  background:var(--primary);
+  color:white;text-decoration:none;border:none;cursor:pointer;font-weight:700;
+}
+.btn.ghost{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+.form-actions{display:flex;gap:8px;margin-top:12px}
+
+/* lists */
+.saved-list{margin-top:12px}
+.item{
+  background:var(--card);
+  padding:12px;border-radius:8px;margin-bottom:10px;border:1px solid #E5E7EB;
+}
+.item h3{margin:0 0 6px 0}
+.item p{margin:4px 0;color:var(--muted)}
+
+/* search card */
+.search-card{display:flex;gap:8px;align-items:center;margin-top:12px}
+.search-card input{flex:1}
+
+/* footer */
+.site-footer{margin-top:20px;padding:12px;color:var(--muted);font-size:14px}
+
+/* responsive */
+@media (max-width:800px){
+  .hero{flex-direction:column}
+  .header-inner{flex-direction:column;align-items:flex-start}
+  nav a{display:inline-block;margin:6px 4px}
 }
 
-input, textarea, select, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #3B82F6;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #2563EB;
-}
+/* 4) اختیاری: چند کلاس کمکی برای همسان‌سازی (اگر خواستی می‌توانم اینها را به کلاس‌های Tailwind تبدیل کنم) */
+.text-muted{color:var(--muted)}
+.center{display:flex;align-items:center;justify-content:center}

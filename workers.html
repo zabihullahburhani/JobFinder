@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>لیست کارگران</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>جستجوی کارگران - کاریابی</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>لیست کارگران</h1>
-    <nav>
-      <a href="index.html">خانه</a> |
-      <a href="employer.html">ثبت کارفرما</a> |
-      <a href="worker.html">ثبت کارگر</a> |
-      <a href="jobs.html">جستجوی کار</a>
-    </nav>
+    <div class="header-inner">
+      <div class="logo"><img src="logo-placeholder.png" alt="لوگو" /></div>
+      <nav>
+        <a href="index.html">خانه</a>
+        <a href="employer.html">ثبت کارفرما</a>
+        <a href="worker.html">ثبت کارگر</a>
+        <a href="jobs.html">جستجوی کار</a>
+        <a href="workers.html">جستجوی کارگران</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container" id="workerList"></div>
+  <main class="container">
+    <h2>جستجوی کارگران</h2>
 
-  <script src="script.js"></script>
+    <div class="search-card">
+      <input id="workerSearchInput" type="text" placeholder="مهارت یا نام را وارد کنید...">
+      <button id="workerSearchBtn" class="btn">جستجو</button>
+      <button id="workerClearBtn" class="btn ghost">نمایش همه</button>
+    </div>
+
+    <div id="workerList" class="saved-list"></div>
+
+    <footer class="site-footer">
+      <p>نتایج از داده‌های ثبت‌شده در مرورگر شما خوانده می‌شود.</p>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-

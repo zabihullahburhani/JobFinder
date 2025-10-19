@@ -1,30 +1,79 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>کاریابی آنلاین</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>سامانه کاریابی و کارفرمایی</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>سامانه کاریابی و کارفرمایی</h1>
-    <nav>
-      <a href="employer.html">ثبت کارفرما</a> |
-      <a href="worker.html">ثبت کارگر</a> |
-      <a href="jobs.html">جستجوی کار</a> |
-      <a href="workers.html">جستجوی کارگران</a>
-    </nav>
+    <div class="header-inner">
+      <div class="logo">
+        <!-- مکان قرارگیری لوگو: میتوانید لوگو.png را در همان پوشه قرار دهید -->
+        <img src="logo-placeholder.png" alt="لوگو" />
+      </div>
+      <nav>
+        <a href="index.html">خانه</a>
+        <a href="employer.html">ثبت کارفرما</a>
+        <a href="worker.html">ثبت کارگر</a>
+        <a href="jobs.html">جستجوی کار</a>
+        <a href="workers.html">جستجوی کارگران</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <h2>درباره سایت</h2>
-    <p>
-      این وب‌سایت برای اتصال کارگران و کارفرمایان طراحی شده است. 
-      کارفرمایان می‌توانند فرصت‌های کاری خود را ثبت کنند و 
-      کارگران نیز می‌توانند مهارت‌ها و تخصص‌های خود را معرفی نمایند.
-    </p>
-  </div>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>اتصال آسان کارفرما و کارگر</h1>
+        <p class="slogan">فرصت‌های شغلی محلی را بیابید — ثبت و جستجو رایگان و ساده</p>
+        <div class="hero-actions">
+          <a class="btn" href="employer.html">ثبت فرصت کاری</a>
+          <a class="btn ghost" href="worker.html">ثبت خود به‌عنوان کارگر</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1523480717986-6d2a3a0b0f4a?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="کاریابی">
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>برای کارفرمایان</h3>
+        <p>فرصت کاری خود را سریع ثبت کنید و به جامعه‌ای از کارگران مراجعه کنید.</p>
+      </div>
+      <div class="feature">
+        <h3>برای کارگران</h3>
+        <p>مهارت‌ها و تجربه‌تان را معرفی کرده و فرصت‌های مناسب را بیابید.</p>
+      </div>
+      <div class="feature">
+        <h3>دسترسی رایگان</h3>
+        <p>تمامی امکانات بدون هزینه و برای اشتراک‌گذاری در سایر پلتفرم‌ها.</p>
+      </div>
+    </section>
+
+    <section class="quotes">
+      <h2>شعارهای الهام‌بخش</h2>
+      <ul>
+        <li>«فرصت‌ها را باید ساخت؛ منتظر نمانید.»</li>
+        <li>«هر کار کوچک، گامی به سوی موفقیت است.»</li>
+        <li>«همکاری، رمز تبدیل ایده به واقعیت است.»</li>
+      </ul>
+    </section>
+
+    <section class="howto">
+      <h2>چگونه کار می‌کند</h2>
+      <ol>
+        <li>ثبت‌نام یا وارد شدن (نیاز به ثبت‌نام ندارد — فقط فرم را تکمیل کنید)</li>
+        <li>اطلاعات کار یا مهارت را ثبت کنید</li>
+        <li>جستجو و تماس مستقیم با طرف مقابل</li>
+      </ol>
+    </section>
+
+    <footer class="site-footer">
+      <p>این سایت یک نمونه استاتیک برای کاریابی محلی است. برای ذخیره خودکار روی گیت‌هاب، راهنمایی در README قرار دارد.</p>
+    </footer>
+  </main>
 </body>
 </html>
-
-

@@ -1,33 +1,61 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>ثبت کارگر</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ثبت کارگر - کاریابی</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>ثبت کارگر</h1>
-    <nav>
-      <a href="index.html">خانه</a> |
-      <a href="employer.html">ثبت کارفرما</a> |
-      <a href="jobs.html">جستجوی کار</a> |
-      <a href="workers.html">جستجوی کارگران</a>
-    </nav>
+    <div class="header-inner">
+      <div class="logo"><img src="logo-placeholder.png" alt="لوگو" /></div>
+      <nav>
+        <a href="index.html">خانه</a>
+        <a href="employer.html">ثبت کارفرما</a>
+        <a href="worker.html">ثبت کارگر</a>
+        <a href="jobs.html">جستجوی کار</a>
+        <a href="workers.html">جستجوی کارگران</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <form id="workerForm">
-      <input type="text" placeholder="نام کارگر" required id="wName">
-      <input type="text" placeholder="مهارت" required id="wSkill">
-      <input type="text" placeholder="تجربه (به سال)" id="wExp">
-      <input type="text" placeholder="شماره تماس" required id="wPhone">
-      <button type="submit">ثبت اطلاعات</button>
-    </form>
-  </div>
+  <main class="container">
+    <h2>ثبت مشخصات کارگر</h2>
+    <p class="hint"> لطفاً تمام فیلدها را پر کنید تا کارفرمایان بتوانند به راحتی شما را پیدا کنند. در بخش توضیحات نرخ یا نوع دستمزد و ساعت کاری را بنویسید.</p>
 
-  <script src="script.js"></script>
+    <form id="workerForm" class="form-card">
+      <label>نام کارگر</label>
+      <input id="wName" type="text" placeholder="مثلاً: محمد احمدی" required>
+
+      <label>مهارت اصلی</label>
+      <input id="wSkill" type="text" placeholder="مثلاً: برقکار، راننده، نجار" required>
+
+      <label>تجربه (سال)</label>
+      <input id="wExp" type="number" min="0" placeholder="مثلاً: 3">
+
+      <label>نرخ/دستمزد پیشنهادی (اختیاری)</label>
+      <input id="wRate" type="text" placeholder="مثلاً: روزانه 600 AFN">
+
+      <label>شماره تماس</label>
+      <input id="wPhone" type="text" placeholder="مثلاً: 0700123456" required>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">ثبت کارگر</button>
+        <button type="button" id="downloadWorkers" class="btn ghost">دانلود (JSON)</button>
+      </div>
+    </form>
+
+    <section class="saved-list">
+      <h3>کارگران ثبت شده</h3>
+      <div id="workerList"></div>
+    </section>
+
+    <footer class="site-footer">
+      <p>بعد از ثبت، می‌توانید داده‌ها را دانلود کرده و در گیت‌هاب بارگذاری کنید.</p>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-

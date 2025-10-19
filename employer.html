@@ -1,33 +1,61 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>ثبت کارفرما</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ثبت کارفرما - کاریابی</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>ثبت کارفرما</h1>
-    <nav>
-      <a href="index.html">خانه</a> |
-      <a href="worker.html">ثبت کارگر</a> |
-      <a href="jobs.html">جستجوی کار</a> |
-      <a href="workers.html">جستجوی کارگران</a>
-    </nav>
+    <div class="header-inner">
+      <div class="logo"><img src="logo-placeholder.png" alt="لوگو" /></div>
+      <nav>
+        <a href="index.html">خانه</a>
+        <a href="employer.html">ثبت کارفرما</a>
+        <a href="worker.html">ثبت کارگر</a>
+        <a href="jobs.html">جستجوی کار</a>
+        <a href="workers.html">جستجوی کارگران</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <form id="employerForm">
-      <input type="text" placeholder="نام کارفرما" required id="empName">
-      <input type="text" placeholder="شماره تماس" required id="empPhone">
-      <input type="text" placeholder="نوع کار مورد نیاز" required id="empJobType">
-      <textarea placeholder="توضیحات" id="empDesc"></textarea>
-      <button type="submit">ثبت اطلاعات</button>
-    </form>
-  </div>
+  <main class="container">
+    <h2>ثبت فرصت کاری (برای کارفرما)</h2>
+    <p class="hint">لطفاً اطلاعات دقیق وارد شود. این اطلاعات در مرورگر ذخیره و می‌توانید آن‌ها را دانلود یا به صورت دستی در گیت‌هاب قرار دهید.</p>
 
-  <script src="script.js"></script>
+    <form id="employerForm" class="form-card">
+      <label>نام کارفرما (یا شرکت)</label>
+      <input id="empName" type="text" placeholder="مثلاً: شرکت خدماتی احمدی" required>
+
+      <label>شماره تماس</label>
+      <input id="empPhone" type="text" placeholder="مثلاً: 0700123456" required>
+
+      <label>نوع کار مورد نیاز</label>
+      <input id="empJobType" type="text" placeholder="مثلاً: نقاشی، رانندگی، نگهبانی" required>
+
+      <label>دستمزد / نرخ پیشنهادی (اختیاری)</label>
+      <input id="empRate" type="text" placeholder="مثلاً: روزانه 800 AFN">
+
+      <label>توضیحات (محل، مدت، شرایط)</label>
+      <textarea id="empDesc" rows="4" placeholder="مثلاً: نیاز به کارگر با تجربه، ساعت کاری..."></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">ثبت فرصت</button>
+        <button type="button" id="downloadJobs" class="btn ghost">دانلود (JSON)</button>
+      </div>
+    </form>
+
+    <section class="saved-list">
+      <h3>فرصت‌های ثبت شده</h3>
+      <div id="jobList"></div>
+    </section>
+
+    <footer class="site-footer">
+      <p>می‌توانید بعد از ثبت، فایل JSON را دانلود کرده و در گیت‌هاب خود آپلود کنید تا داده‌ها در مخزن شما قرار گیرد.</p>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
